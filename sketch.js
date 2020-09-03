@@ -194,7 +194,7 @@ function modelReady() {
 
 function setup() {
   frameRate(30);
- // print(responsiveVoice.getVoices());
+  // print(responsiveVoice.getVoices());
   const canvas = createCanvas(windowWidth, windowHeight);
   setupGamepad();
 
@@ -202,9 +202,9 @@ function setup() {
   let constraints = {
     video: {
       mandatory: {
-       // minWidth: 1280,
-     //   minHeight: 720
-         minWidth: 640,
+        // minWidth: 1280,
+        //   minHeight: 720
+        minWidth: 640,
         minHeight: 480
       }
       // ,optional: [{ maxFrameRate: 10 }]
@@ -212,12 +212,12 @@ function setup() {
     audio: false
   };
   video = createCapture(constraints, function(stream) {
-   
+
 
   });
 
   //video.size(1280, 720);
-  video.size(640,480);
+  video.size(640, 480);
   // print(video.height);
 
 
@@ -289,7 +289,7 @@ function setup() {
 
   chromeAgent = navigator.userAgent.indexOf("Chrome") > -1;
 
-  
+
 
   textAlign(CENTER);
   imageMode(CENTER);
@@ -322,8 +322,7 @@ function draw() {
   {
     playSounds = false;
     updateSounds();
-    print("sdf");
-  //  state = -1;
+
     mouseIsPressed = false;
     mySound.stop();
     queue = [];
@@ -331,7 +330,17 @@ function draw() {
     curText = "";
     movementStep = 0;
     introStep = 0;
-     image(img_outro, width / 2, height / 2, windowWidth, windowWidth / img_outro.width * img_outro.height);
+    state = -3;
+
+  } else if (state == -3) {
+    image(img_outro, width / 2, height / 2, windowWidth, windowWidth / img_outro.width * img_outro.height);
+    cursor(HAND);
+    if (mouseIsPressed && mouseX > width / 2) {
+      state = -1;
+
+    } else if (mouseIsPressed && mouseX < width / 2) {
+      var myWindow = window.open("https://forms.gle/ww9vmCF548KG7UhD6", "_blank");
+    }
 
   } else if (state == -2) // startup loading
   {
@@ -380,14 +389,14 @@ function draw() {
         state = 0;
       }, 3000);
       mySound.play();
-       mySound.setVolume(0.3);
+      mySound.setVolume(0.3);
     }
 
   } else if (state == -0.5) {
 
   } else if (state == 0) { // introduction
 
-   
+
     if (!speaking) {
       if (introStep == 3 && (poses == undefined || (poses != undefined && poses.length == 0))) {
         // nobody on the screen
@@ -396,10 +405,10 @@ function draw() {
         addSpeak(intro[introStep], 1000);
         introStep++
       } else {
-        mySound.setVolume(1,1);
+        mySound.setVolume(1, 1);
         setTimeout(function() {
           state = 0.5;
-          mySound.setVolume(0.2,1);
+          mySound.setVolume(0.2, 1);
         }, 10000);
 
       }
@@ -411,7 +420,7 @@ function draw() {
 
 
   } else if (state == 0.5) { // guided to a sound bit
-  
+
     if (!speaking) {
 
       if (guidedToPos < guidedToASoundBite.length) {
@@ -430,12 +439,12 @@ function draw() {
         sI = round(random(sounds.length - 1));
         sounds[sI].stop();
         print(sounds[sI].isLooping());
-      } else if (guidedToPos == guidedToASoundBite.length+1 && !sounds[sI].isPlaying()) { // atart the sound
+      } else if (guidedToPos == guidedToASoundBite.length + 1 && !sounds[sI].isPlaying()) { // atart the sound
         guidedToPos++;
         sounds[sI].play();
         sounds[sI].setVolume(1);
-          curText = "";
-      } else if (guidedToPos == guidedToASoundBite.length+2 && !sounds[sI].isPlaying()) { // go to the next state
+        curText = "";
+      } else if (guidedToPos == guidedToASoundBite.length + 2 && !sounds[sI].isPlaying()) { // go to the next state
         state = 1;
 
         addSpeak("Now it’s your turn to remember from the body - once you’re in the position, \nI invite you to share the memories or images that arise by talking out loud. \nIf nothing comes to mind just say that and relax.", 3000);
@@ -447,10 +456,10 @@ function draw() {
 
 
   } else if (state == 1) { // guided movement
-   
+
     if (!speaking) { // find yor moment.
       if (movementStep == 1) {
-      //  addSpeak(pauseAndListen, random(7000, 10000));
+        //  addSpeak(pauseAndListen, random(7000, 10000));
         state = 2;
       } else { // moving the body
 
@@ -469,7 +478,7 @@ function draw() {
 
   } else if (state == 2) // finding a moment
   {
-   
+
     if (!speaking) {
       addSpeak("What comes to mind when you’re in this position? \nDo you remember anything? \nPlease talk out loud for up to half a minute. From 3. 2. 1. now", 0);
 
@@ -479,12 +488,12 @@ function draw() {
 
 
   } else if (state == 3) {
-   
+
     if (!speaking) {
       mySound.setVolume(0, 1);
       state = 4;
       startPoseRecording();
-       recordingTimer = millis();
+      recordingTimer = millis();
 
       setTimeout(function() {
         endPoseRecording();
@@ -493,32 +502,30 @@ function draw() {
         addSpeak("You can now explore your memory with all the other memories", 3000);
         addSpeak("Move your body into different positions to explore the landscape", 3000);
         state = 5;
-    
+
         setTimeout(function() {
           curText = "";
         }, 30000);
-  
+
       }, 20000);
     }
 
   } else if (state == 4) { // recording
-   // todo countdown?
-    background(255,0,0);
-    fill(0,0,0);
-    rect(0,0,width, map(millis()-recordingTimer ,0,20000,0,height));
-  }
-  
-  else if (state == 5) { // exploration
-     if (!speaking && !playSounds) {
-       playSounds = true;
-        updateSounds();
-     }
+    // todo countdown?
+    background(255, 0, 0);
+    fill(0, 0, 0);
+    rect(0, 0, width, map(millis() - recordingTimer, 0, 20000, 0, height));
+  } else if (state == 5) { // exploration
+    if (!speaking && !playSounds) {
+      playSounds = true;
+      updateSounds();
+    }
 
   }
 
 
   if (state >= 0 && state != 4 && fullscreen()) {
-  printEye();
+    printEye();
     push();
 
     scale(videoScaling);
@@ -1044,8 +1051,9 @@ function cleanUpSkeleton(skeleton) {
 
 // A function to draw ellipses over the detected keypoints
 var oldKeypoint;
+
 function drawKeypoints(pose) {
-  
+
   // Loop through all the poses detected
   // 
 
@@ -1057,14 +1065,13 @@ function drawKeypoints(pose) {
       fill(255, 255, 255, 150);
       noStroke();
       ellipse(keypoint.position.x, keypoint.position.y, 15, 15);
-      if(oldKeypoint!=undefined)
-      {
-          stroke(255, 255, 255, 150);
-      strokeWeight(4);
-     // line(keypoint.position.x, keypoint.position.y,oldKeypoint.position.x, oldKeypoint.position.y);
+      if (oldKeypoint != undefined) {
+        stroke(255, 255, 255, 150);
+        strokeWeight(4);
+        // line(keypoint.position.x, keypoint.position.y,oldKeypoint.position.x, oldKeypoint.position.y);
       }
-      
-     oldKeypoint =keypoint;
+
+      oldKeypoint = keypoint;
 
     }
   }

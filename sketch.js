@@ -324,6 +324,7 @@ function draw() {
     updateSounds();
 
     mouseIsPressed = false;
+    doClassify = false;
     mySound.stop();
     queue = [];
     guidedToPos = 0;
@@ -374,7 +375,7 @@ function draw() {
 
 
     if (!chromeAgent) {
-      curText = "I feel most at home in a Chrome Desktop Browser - our experience may vary";
+      curText = "I feel most at home in a Chrome Desktop Browser\n - our experience may vary";
     }
     printSubtitle();
     if (mouseIsPressed && mouseX > width / 2) {
@@ -388,6 +389,7 @@ function draw() {
       fullscreen(true);
       curText = "";
       state = -0.5;
+      doClassify = false;
       setTimeout(function() {
         state = 0;
       }, 3000);
@@ -505,7 +507,7 @@ function draw() {
         addSpeak("You can now explore your memory with all the other memories", 3000);
         addSpeak("Move your body into different positions to explore the landscape", 3000);
         state = 5;
-
+        doClassify = true;
         setTimeout(function() {
           curText = "";
         }, 30000);

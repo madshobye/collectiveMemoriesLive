@@ -197,7 +197,7 @@ function setup() {
   // print(responsiveVoice.getVoices());
   const canvas = createCanvas(windowWidth, windowHeight);
   setupGamepad();
-
+ 
   canvas.parent('videoContainer');
   let constraints = {
     video: {
@@ -379,6 +379,9 @@ function draw() {
     printSubtitle();
     if (mouseIsPressed && mouseX > width / 2) {
       cursor("auto");
+      getAudioContext().resume().then(() => {
+    console.log('Playback resumed successfully');
+  });
       /*      var sI = round(random(sounds.length - 1));
             sounds[sI].play();
                sounds[sI].setVolume(1);*/

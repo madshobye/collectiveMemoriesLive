@@ -374,7 +374,7 @@ function draw() {
 
 
     if (!chromeAgent) {
-      curText = "I feel most at home in a Chrome Browser - our experience may vary";
+      curText = "I feel most at home in a Chrome Desktop Browser - our experience may vary";
     }
     printSubtitle();
     if (mouseIsPressed && mouseX > width / 2) {
@@ -579,6 +579,13 @@ function draw() {
       //  curCleanedPose.draw();
       pop();
 
+    }
+    
+    if(getAudioContext().state === 'running')
+    {
+      fill(120, 120, 1);
+      ellipse(width-40,40,10,10);
+      
     }
 
 

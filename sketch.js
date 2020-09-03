@@ -137,7 +137,7 @@ function preload() {
   soundFormats('mp3', 'ogg');
   mySound = loadSound(soundFile);
   img_info = loadImage("data/intro.png");
-  img_outro = loadImage("data/outro.png");
+  img_outro = loadImage("data/outro2.png");
 
 
   img = loadImage('hall.png');

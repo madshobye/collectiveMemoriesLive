@@ -50,7 +50,7 @@ var sentences = [
   "Bend both knees a little and lean forward slightly \nto put both hands on your cheeks.",
   "Standing on two feet and bending the knees slightly, \nput your right hand on your right knee and \nyour left hand on your left cheek and look down.",
  "With a slight bend to the knees, float your hands \naway from your body as if you were wearing \na huge ballroom dress. Make a slight bend to the \nelbows, relax your hands and open your chest.",
-  "On straight legs look down to the floor \njust in front of your feet. Extend both arms \nout to the sides until the hands are above the shoulders. \nThen leave the hands hanging down from the wrist.",
+  "With straight legs look down to the floor \njust in front of your feet. Extend both arms \nout to the sides until the hands are above the shoulders. \nThen leave the hands hanging down from the wrist.",
   "With your right arm imagine pointing straight in \nfront of you with the fingers remaining together.",
   "While your arms are hanging down, imagine pushing \nsomething behind you with the left palm away from you.",
   "Turn your body right so that your profile is facing the camera.\nTake the right hand and face the palm towards the camera, \nand slightly turn the upper body in the same direction.",

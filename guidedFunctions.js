@@ -67,7 +67,7 @@ function speak(text) {
     onstart: StartCallback,
     onend: EndCallback,
     pitch: 0.8,
-    rate: 0.9
+    rate: 0.8
   });
 }
 

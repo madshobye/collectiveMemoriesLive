@@ -1,6 +1,6 @@
 /*
   ####################################
-  GUIDED VARS
+  GUIDED VARS maja rettelser
   ####################################
 */
 
@@ -8,23 +8,26 @@
 // Based on https://responsivevoice.org/
 // Maja, USE THIS DOC: https://docs.google.com/document/d/1CtvZh465qMDjXpUCdIsXLl2yzwksrnKub_Ok-DW3iZs/edit
 var intro = [
-  "Welcome to collective memories.\n I am your guide. ",
-  "To experience collective memories\n please step out onto the floor\n where you have some space around you",
+  "Welcome to collectiveMemories.\nI am your guide. ",
+  "To experience collectiveMemories \nplease step out onto the floor.",
   "Thank you.",
-  "Position yourself so you can see your full body as a stickfigure",
+  "Position yourself so you \ncan see your full body as a stickfigure.",
+  "Or as much of your body as possible.",
+  "Please know that you can start over at any point\nJust press escape.",
   "Take a deep breath in and exhale relaxing your shoulders.",
-  "Moving your weight a little bit from foot to foot before settling \nwhere your weight can drop down from the top of your head\n to your shoulders, \nyour hips and through your legs to the soles of your feet. ",
-  "When you're ready I invite you to close your eyes,\n feeling your eyes heavy and relaxing your face.",
-  "This is the neutral position you can return to after each position \nI will guide you into.",
-  "You can open your eyes whenever you wish to, just try to stay with the experience. ",
-  "First I would like you to think about your earliest childhood memories.\n What are the first things you remember?"
+  "Move your weight a little bit \nfrom foot to foot before settling.",
+  "Feel your weight drop down \nfrom the top of your head to your shoulders.", "Feel the weight through your hips, your legs \nto the soles of your feet. ",
+  "When you're ready, I invite you to close your eyes.", "Feel how your eyes get heavy, \nrelaxing your face.",
+  "This is the neutral position you can return to \nafter each position I will guide you through.",
+  "You can open your eyes if you wish.\njust try to stay with the experience. ",
+  "First, I would like you to think about \nyour earliest childhood memories.", "What are the first things you remember?"
 ];
 
 
 var guidedToASoundBite = [
-  "Now I will guide you to a memory from another person.",
-  "Please listen to the memory, see if the story resonate with your own childhood.",
-  "Firstly, I will guide you into a physical position. Breathe, relax and follow my instructions."
+  "Now I will guide you through a memory by another person.",
+  "Please listen to the memory, \nand see if the story resonate with your own childhood.",
+  "I will start by guiding you into a physical position.", "Breathe, relax, and follow my instructions as best as you can. \nDon't worry if you get it wrong."
 
 ];
 
@@ -40,24 +43,24 @@ var queue = [];
 
 // Maja, https://docs.google.com/document/d/1dh9Tqre-8Wp7Ge-tvnX6kqsrOJuWgiWIet3iPNpkt_A/edit#
 var sentences = [
-  "With your [side] foot, take one step forward. \nBend both knees and elbows, then lift both hands up making fists, the right hand slightly higher than the left.",
-  "Extend the left arm in front of your body, palm facing down, \npalm no higher than just above shoulder level. \nThe right arm extends in a similar way but to the side of your body. \nThis opens the chest slightly towards the right; take one step with the right foot in that direction, keeping knees straight.",
-  "Come down to the floor, sitting on your feet with your knees bent,\n your hands come to the floor in front of your knees.",
-  "Standing on both feet, take your left palm of the hand towards the ceiling. Extend your arm.",
-  "Bend both knees a little and lean forward slightly to put both hands on your cheeks.",
-  "Standing on two feet and bending the knees slightly,\nput your right hand on your right thigh and your left hand on your left cheek,\nlook down.",
-  "With a slight bend to the knees,\n float your hands away from your body as if you were wearing a huge ballroom dress,\n the very slightest bend to the elbows, relaxed hands and open chest.",
-  "On straight legs look down to the floor just in front of your feet\n and extend both arms out to the sides until the hands are above the shoulders\n then leave the hands hanging down from the wrist.",
-  "With your right arm imagine pointing straight in front of you but let the fingers remain together.",
-  "While your arms are hanging down imagine pushing something behind you with the left palm a little bit away from you.",
-  "Turn towards the right side of the room so that your profile is facing their camera.\nTake the right hand and face the palm towards the camera by crossing the arm across your body\n and turning the upper body slightly in that direction.",
-  "Crouch down, sitting on your knees with the heels off the floor\nand both elbows resting on the thighs or knees, \nhands hanging down together.",
-  "Standing, turn your head to look to the right with eyes closed, \ntake the top of your left foot and place it into the floor so that your weight is now mainly on your right foot and your left knee is bent.",
-  "Lift both your arms up above your head, straight arms and the palms facing out towards the sides, \nturn around 180 degrees.",
-  "Turn with your back towards the camera, cross your right leg behind your left leg, \nand tip your shoulders towards the left-leaning a little bit towards the left. Tip your head in the same direction and look down towards the floor.",
-  "Turn your whole body slightly to the left, \nplace your right hand on your left shoulder, \nlook down towards the floor with eyes closed.",
-  "Bend down to put your left hand on the left knee, \nbend your right elbow so that the right hand comes close to your shoulder\n and make a fist, open your chest and face towards the right.",
-  "Standing, feel the palm of your right hand. \nImagine someone pulling your fingers of the right hand straight back behind you\n so that the palm faces the ceiling. \nPulling it so much so that the shoulder also comes along and even the head gazing slightly back behind your body."
+ "With your left foot, take one step forward. \nBend both knees and elbows, then lift both hands up \n and make fists while the right hand \nis slightly higher than the left.",
+  "Extend the left arm in front of your body, palm facing down. \nExtend the right arm in a similar way but to the side of \nyour body. Open the chest towards the right and take \na step with the right foot, keeping the knees straight.",
+  "Come down to the floor, sitting on your feet  \nwith your knees bent. Let your hands \ncome to the floor in front of your knees.",
+  "Standing on both feet, take your left palm of the  \nhand towards the ceiling and extend your arm.",
+  "Bend both knees a little and lean forward slightly \nto put both hands on your cheeks.",
+  "Standing on two feet and bending the knees slightly, \nput your right hand on your right knee and \nyour left hand on your left cheek and look down.",
+ "With a slight bend to the knees, float your hands \naway from your body as if you were wearing \na huge ballroom dress. Make a slight bend to the \nelbows, relax your hands and open your chest.",
+  "On straight legs look down to the floor \njust in front of your feet. Extend both arms \nout to the sides until the hands are above the shoulders. \nThen leave the hands hanging down from the wrist.",
+  "With your right arm imagine pointing straight in \nfront of you with the fingers remaining together.",
+  "While your arms are hanging down, imagine pushing \nsomething behind you with the left palm away from you.",
+  "Turn your body right so that your profile is facing the camera.\nTake the right hand and face the palm towards the camera, \nand slightly turn the upper body in the same direction.",
+  "Crouch down, sitting on your heels, let both elbows \nrest on the knees and let the hands hang loosely.",
+  "Standing, turn your head to the right. \nTake the weight into the right foot, but support your balance \nwith the toes of the left foot, bending your left knee.",
+  "Lift both your arms up above your head, straight arms and \nthe palms facing out towards the sides, turn around 180 degrees.",
+  "Turn your back towards the camera, cross your \nright leg behind your left leg. Tip your shoulders and lean \na little bit towards the left. Tip your head in the \nsame direction and look down towards the floor.",
+  "Turn your whole body slightly to the left, \nplace your right hand on your left shoulder. \nLook down towards the floor with eyes closed.",
+  "Bend down to put your left hand on the left knee. \nBend your right elbow so that the right hand comes close \nto your shoulder and make a fist, look up towards the right.",
+  "Standing, feel the palm of your right hand. \nImagine someone pulling it straight back \nuntil the palm faces the ceiling, and even \nyour head follows and gazes slightly back."
 ]
 
 
@@ -197,7 +200,7 @@ function setup() {
   // print(responsiveVoice.getVoices());
   const canvas = createCanvas(windowWidth, windowHeight);
   setupGamepad();
- 
+
   canvas.parent('videoContainer');
   let constraints = {
     video: {
@@ -322,7 +325,7 @@ function draw() {
   {
     playSounds = false;
     updateSounds();
-
+    responsiveVoice.cancel();
     mouseIsPressed = false;
     doClassify = false;
     mySound.stop();
@@ -336,12 +339,12 @@ function draw() {
   } else if (state == -3) {
     image(img_outro, width / 2, height / 2, windowWidth, windowWidth / img_outro.width * img_outro.height);
     cursor(HAND);
-    if (mouseIsPressed && mouseX > width / 2) {
-      state = -1;
+    /*  if (mouseIsPressed && mouseX > width / 2) {
+        state = -1;
 
-    } else if (mouseIsPressed && mouseX < width / 2) {
-      var myWindow = window.open("https://forms.gle/ww9vmCF548KG7UhD6", "_blank");
-    }
+      } else if (mouseIsPressed && mouseX < width / 2) {
+        var myWindow = window.open("https://forms.gle/ww9vmCF548KG7UhD6", "_blank");
+      }*/
 
   } else if (state == -2) // startup loading
   {
@@ -378,24 +381,22 @@ function draw() {
       curText = "I feel most at home in a Chrome Desktop Browser\n - our experience may vary";
     }
     printSubtitle();
-    if (mouseIsPressed && mouseX > width / 2) {
-      cursor("auto");
-      getAudioContext().resume().then(() => {
-    console.log('Playback resumed successfully');
-  });
-      /*      var sI = round(random(sounds.length - 1));
-            sounds[sI].play();
-               sounds[sI].setVolume(1);*/
-      fullscreen(true);
-      curText = "";
-      state = -0.5;
-      doClassify = false;
-      setTimeout(function() {
-        state = 0;
-      }, 3000);
-      mySound.play();
-      mySound.setVolume(0.3);
-    }
+    /*  if (mouseIsPressed && mouseX > width / 2) {
+        cursor("auto");
+        getAudioContext().resume().then(() => {
+          console.log('Playback resumed successfully');
+        });
+      
+        fullscreen(true);
+        curText = "";
+        state = -0.5;
+        doClassify = false;
+        setTimeout(function() {
+          state = 0;
+        }, 3000);
+        mySound.play();
+        mySound.setVolume(0.3);
+      }*/
 
   } else if (state == -0.5) {
 
@@ -412,7 +413,7 @@ function draw() {
       } else {
         mySound.setVolume(1, 1);
         setTimeout(function() {
-          state = 0.5;
+          state = 1;
           mySound.setVolume(0.2, 1);
         }, 10000);
 
@@ -421,10 +422,7 @@ function draw() {
     }
 
 
-
-
-
-  } else if (state == 0.5) { // guided to a sound bit
+  } else if (state == 1) { // guided to a sound bit
 
     if (!speaking) {
 
@@ -441,18 +439,16 @@ function draw() {
         print(movementText);
         addSpeak(movementText, random(4000, 7000));
         guidedToPos++;
-        sI = round(random(sounds.length - 1));
+        sI = round(random(sounds.length - 3));
         sounds[sI].stop();
-        print(sounds[sI].isLooping());
       } else if (guidedToPos == guidedToASoundBite.length + 1 && !sounds[sI].isPlaying()) { // atart the sound
         guidedToPos++;
         sounds[sI].play();
         sounds[sI].setVolume(1);
         curText = "";
       } else if (guidedToPos == guidedToASoundBite.length + 2 && !sounds[sI].isPlaying()) { // go to the next state
-        state = 1;
-
-        addSpeak("Now it’s your turn to remember from the body - once you’re in the position, \nI invite you to share the memories or images that arise by talking out loud. \nIf nothing comes to mind just say that and relax.", 3000);
+        state = 2;
+        addSpeak("Now it’s your turn to remember from your body.", "Once you’re in the position, I invite you to share \nthe memories or images that arise by talking out loud.", "If nothing comes to mind just say that and relax.", 3000);
 
       }
 
@@ -460,12 +456,12 @@ function draw() {
     }
 
 
-  } else if (state == 1) { // guided movement
+  } else if (state == 2) { // guided movement
 
     if (!speaking) { // find yor moment.
       if (movementStep == 1) {
         //  addSpeak(pauseAndListen, random(7000, 10000));
-        state = 2;
+        state = 3;
       } else { // moving the body
 
         var movementText = getRandom(sentences)
@@ -481,46 +477,46 @@ function draw() {
       }
     }
 
-  } else if (state == 2) // finding a moment
+  } else if (state == 3) // finding a moment
   {
 
     if (!speaking) {
       addSpeak("What comes to mind when you’re in this position? \nDo you remember anything? \nPlease talk out loud for up to half a minute. From 3. 2. 1. now", 0);
 
-      state = 3;
+      state = 4;
     }
 
 
 
-  } else if (state == 3) {
+  } else if (state == 4) {
 
     if (!speaking) {
       mySound.setVolume(0, 1);
-      state = 4;
+      state = 5;
       startPoseRecording();
       recordingTimer = millis();
+      curText = "";
 
       setTimeout(function() {
         endPoseRecording();
         mySound.setVolume(0.3, 1);
-        addSpeak("Thank you for sharing your experience. It has been saved to your computer.", 3000);
-        addSpeak("You can now explore your memory with all the other memories", 3000);
-        addSpeak("Move your body into different positions to explore the landscape", 3000);
-        state = 5;
+        addSpeak("Thank you for sharing your memory. \nIt has been saved to your computer.", 3000);
+        addSpeak("You can now explore your memory \nwith all the other memories.", 3000);
+        addSpeak("Move your body into different positions \nto explore the memory landscape.", 3000);
+        state = 6;
         doClassify = true;
         setTimeout(function() {
           curText = "";
         }, 30000);
 
-      }, 20000);
+      }, 40000);
     }
 
-  } else if (state == 4) { // recording
-    // todo countdown?
+  } else if (state == 5) { // recording
     background(255, 0, 0);
     fill(0, 0, 0);
-    rect(0, 0, width, map(millis() - recordingTimer, 0, 20000, 0, height));
-  } else if (state == 5) { // exploration
+    rect(0, 0, width, map(millis() - recordingTimer, 40000, 0, 0, height));
+  } else if (state == 6) { // exploration
     if (!speaking && !playSounds) {
       playSounds = true;
       updateSounds();
@@ -529,7 +525,9 @@ function draw() {
   }
 
 
-  if (state >= 0 && state != 4 && fullscreen()) {
+  uiUpdate(mouseX, mouseY, mouseIsPressed, key, width, height);
+
+  if (state >= 0 && state != 5 && fullscreen()) {
     printEye();
     push();
 
@@ -543,7 +541,16 @@ function draw() {
     pop();
 
     printSubtitle();
+
   }
+
+  /*if (state >= 0 && state < 6 && uiButton("Skip >>", color(100, 100, 100), 150, 40, width - 250, 0).clicked) {
+    state = state + 1;
+    if (recording) {
+      endPoseRecording();
+    }
+
+  }*/
 
   push();
   textAlign(LEFT);
@@ -554,7 +561,7 @@ function draw() {
     image(video, 0, 0, windowWidth, videoRatio * (windowWidth));
   }
 
-  uiUpdate(mouseX, mouseY, mouseIsPressed, key, width, height);
+
 
   if (uiButton("X", color(0, 0, 0, 0), 40, 40, 0, 0).clicked) {
     showUI = !showUI;
@@ -582,12 +589,11 @@ function draw() {
       pop();
 
     }
-    
-    if(getAudioContext().state === 'running')
-    {
+
+    if (getAudioContext().state === 'running') {
       fill(120, 120, 1);
-      ellipse(width-40,40,10,10);
-      
+      ellipse(width - 40, 40, 10, 10);
+
     }
 
 
@@ -1115,6 +1121,29 @@ function windowResized() {
 
 
 function mousePressed() {
+  if (state == -3 && mouseX > width / 2) {
+    state = -1;
+
+  } else if (state == -3 && mouseX < width / 2) {
+    var myWindow = window.open("https://forms.gle/ww9vmCF548KG7UhD6", "_blank");
+  } else if (state == -1 && mouseX > width / 2) {
+    cursor("auto");
+    getAudioContext().resume().then(() => {
+      console.log('Playback resumed successfully');
+    });
+    /*      var sI = round(random(sounds.length - 1));
+          sounds[sI].play();
+             sounds[sI].setVolume(1);*/
+    fullscreen(true);
+    curText = "";
+    state = -0.5;
+    doClassify = false;
+    setTimeout(function() {
+      state = 0;
+    }, 3000);
+    mySound.play();
+    mySound.setVolume(0.3);
+  }
 
 }
 

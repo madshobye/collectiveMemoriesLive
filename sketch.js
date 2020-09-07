@@ -145,7 +145,7 @@ function preload() {
 
   img = loadImage('hall.png');
 
-  soundFileList.push('audio3/nosound.wav');
+  soundFileList.push('audio2/nosound.wav');
   soundFileList.push('audio2/aasem2.mp3');
   soundFileList.push('audio2/darren.mp3');
   soundFileList.push('audio2/fabienne.mp3');
@@ -160,12 +160,12 @@ function preload() {
   soundFileList.push('audio2/eva.mp3');
   soundFileList.push('audio2/nanna.mp3');
   // soundFileList.push('audio3/nosound.wav');
-  soundFileList.push('audio3/1lise.mp3');
-  soundFileList.push('audio3/2lise.mp3');
-  soundFileList.push('audio3/3lise.mp3');
-  soundFileList.push('audio3/4troels.mp3');
-  soundFileList.push('audio3/5troels.mp3');
-  soundFileList.push('audio3/6troels.mp3');
+  soundFileList.push('audio2/1lise.mp3');
+  soundFileList.push('audio2/2lise.mp3');
+  soundFileList.push('audio2/3lise.mp3');
+  soundFileList.push('audio2/4troels.mp3');
+  soundFileList.push('audio2/5troels.mp3');
+  soundFileList.push('audio2/6troels.mp3');
 
 
 }
